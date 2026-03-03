@@ -796,3 +796,137 @@ a:hover { text-decoration: underline; text-underline-offset: 4px; }
 
   .video-grid { grid-template-columns: 1fr; }
 }
+
+/* ===========================
+   MOBILE FIXES
+=========================== */
+
+@media (max-width: 900px) {
+
+  /* Discography stack */
+  .release {
+    grid-template-columns: 1fr;
+    row-gap: 40px;
+    margin-bottom: 100px;
+  }
+
+  .release .release-cover,
+  .release .release-content,
+  .release.reverse .release-cover,
+  .release.reverse .release-content {
+    grid-column: 1 !important;
+    justify-self: center;
+    text-align: center;
+  }
+
+  .release-content {
+    max-width: 100%;
+  }
+
+  .release-desc {
+    max-width: 100%;
+  }
+
+  /* Smaller cover on mobile */
+  :root {
+    --coverSize: 82vw;
+  }
+
+  /* Video grid → 1 column */
+  .video-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Merch grid */
+  .grid.three {
+    grid-template-columns: 1fr;
+  }
+
+  .grid.two {
+    grid-template-columns: 1fr;
+  }
+
+  /* Hero adjustments */
+  .hero {
+    min-height: 70vh;
+  }
+
+  .hero-inner {
+    padding: 40px 0 40px;
+  }
+
+  .hero-subtitle {
+    font-size: 18px;
+  }
+
+  .hero-ctas {
+    justify-content: center;
+  }
+
+  .hero-card {
+    text-align: center;
+  }
+
+  /* Shows */
+  .show-item {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 12px;
+  }
+
+  .show-actions {
+    justify-content: center;
+  }
+
+  .show-date {
+    margin-inline: auto;
+  }
+
+}
+
+/* ===========================
+   Mobile header / nav fix
+=========================== */
+@media (max-width: 900px) {
+  /* ať sticky sedí i na iPhonech se "safe area" */
+  .site-header {
+    top: env(safe-area-inset-top);
+    background: rgba(11, 11, 15, 0.92); /* víc opaque = méně “jank” při scrollu */
+    backdrop-filter: blur(10px);
+  }
+
+  .header-inner {
+    padding: 10px 0;
+    gap: 10px;
+  }
+
+  /* nav v jednom řádku, scrollovatelný */
+  .nav {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Firefox */
+    gap: 8px;
+    max-width: 100%;
+  }
+
+  .nav::-webkit-scrollbar { display: none; } /* Chrome/Safari */
+
+  .nav a {
+    white-space: nowrap;
+    padding: 8px 10px;
+    font-size: 14px;
+  }
+
+  /* separátory zbytečně rozbíjí řádek */
+  .nav-sep {
+    display: none;
+  }
+
+  /* language switch ať je kompaktní */
+  .lang-switch .lang {
+    padding: 6px 8px;
+    font-size: 10px;
+  }
+}
