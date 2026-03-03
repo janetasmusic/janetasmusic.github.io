@@ -1173,3 +1173,29 @@ a:hover {
     justify-content: center;
   }
 }
+
+@media (max-width: 900px) {
+
+  .header-inner {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+  }
+
+  .brand {
+    grid-column: 1;
+  }
+
+  .nav {
+    grid-column: 2;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+  }
+
+  .lang-switch {
+    grid-column: 3;
+    flex-shrink: 0;
+    margin-left: 8px;
+  }
+
+}
