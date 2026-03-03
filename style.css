@@ -15,9 +15,13 @@
   --coverSize: clamp(340px, 38vw, 460px);
 }
 
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   margin: 0;
@@ -27,9 +31,15 @@ body {
   line-height: 1.55;
 }
 
-a { color: inherit; text-decoration: none; }
+a {
+  color: inherit;
+  text-decoration: none;
+}
 
-a:hover { text-decoration: underline; text-underline-offset: 4px; }
+a:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
 
 .wrap {
   width: min(var(--wrap), calc(100% - 40px));
@@ -46,9 +56,14 @@ a:hover { text-decoration: underline; text-underline-offset: 4px; }
   border-radius: 10px;
 }
 
-.skip-link:focus { left: 12px; z-index: 9999; }
+.skip-link:focus {
+  left: 12px;
+  z-index: 9999;
+}
 
-.muted { color: var(--muted); }
+.muted {
+  color: var(--muted);
+}
 
 /* ===========================
    Header / Nav
@@ -88,7 +103,9 @@ a:hover { text-decoration: underline; text-underline-offset: 4px; }
 .brand:hover,
 .brand:focus,
 .nav a:hover,
-.nav a:focus { text-decoration: none; }
+.nav a:focus {
+  text-decoration: none;
+}
 
 .brand:hover .brand-mark,
 .brand:focus-visible .brand-mark {
@@ -165,7 +182,9 @@ a:hover { text-decoration: underline; text-underline-offset: 4px; }
   align-items: flex-end;
 }
 
-.hero-card { max-width: 720px; }
+.hero-card {
+  max-width: 720px;
+}
 
 .hero-subtitle {
   margin: 0 0 18px;
@@ -189,7 +208,9 @@ a:hover { text-decoration: underline; text-underline-offset: 4px; }
   gap: 10px;
 }
 
-.dot { opacity: .9; }
+.dot {
+  opacity: .9;
+}
 
 /* ===========================
    Sections / Grids / Cards
@@ -199,7 +220,9 @@ a:hover { text-decoration: underline; text-underline-offset: 4px; }
   scroll-margin-top: 20px;
 }
 
-.shows { padding-top: 120px; }
+.shows {
+  padding-top: 120px;
+}
 
 .section.alt {
   background:
@@ -215,11 +238,18 @@ a:hover { text-decoration: underline; text-underline-offset: 4px; }
   letter-spacing: .02em;
 }
 
-.grid { display: grid; gap: 16px; }
+.grid {
+  display: grid;
+  gap: 16px;
+}
 
-.grid.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.grid.two {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
 
-.grid.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.grid.three {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
 
 .card {
   background: rgba(18, 18, 26, .80);
@@ -240,9 +270,15 @@ a:hover { text-decoration: underline; text-underline-offset: 4px; }
   gap: 10px;
 }
 
-.big-link { font-size: 18px; font-weight: 650; }
+.big-link {
+  font-size: 18px;
+  font-weight: 650;
+}
 
-.footer-note { margin-top: 18px; font-size: 13px; }
+.footer-note {
+  margin-top: 18px;
+  font-size: 13px;
+}
 
 /* ===========================
    Buttons
@@ -265,14 +301,19 @@ a:hover { text-decoration: underline; text-underline-offset: 4px; }
   background: rgba(255, 255, 255, .10);
 }
 
-.btn.ghost { background: transparent; }
+.btn.ghost {
+  background: transparent;
+}
 
 .btn.ghost:hover {
   background: rgba(255, 255, 255, .08);
   border-color: rgba(255, 255, 255, .25);
 }
 
-.btn.small { padding: 10px 12px; font-size: 14px; }
+.btn.small {
+  padding: 10px 12px;
+  font-size: 14px;
+}
 
 /* ===========================
    Discography (Zig-Zag)
@@ -280,7 +321,8 @@ a:hover { text-decoration: underline; text-underline-offset: 4px; }
 .discography {
   background: linear-gradient(to bottom, var(--bg), var(--bg2));
   color: var(--text);
-  padding: 120px 0 0; /* ✅ spodní padding pryč -> videa si řeší vlastní */
+  padding: 120px 0 0;
+  /* ✅ spodní padding pryč -> videa si řeší vlastní */
 }
 
 .section-title.light {
@@ -318,9 +360,15 @@ a:hover { text-decoration: underline; text-underline-offset: 4px; }
   align-self: center;
 }
 
-.release.reverse .release-cover { grid-column: 2; justify-self: end; }
+.release.reverse .release-cover {
+  grid-column: 2;
+  justify-self: end;
+}
 
-.release.reverse .release-content { grid-column: 1; justify-self: start; }
+.release.reverse .release-content {
+  grid-column: 1;
+  justify-self: start;
+}
 
 .release-type {
   margin: 0 0 10px;
@@ -331,16 +379,28 @@ a:hover { text-decoration: underline; text-underline-offset: 4px; }
   opacity: .75;
 }
 
-.release-content h3 { font-size: 28px; margin: 0 0 18px; }
+.release-content h3 {
+  font-size: 28px;
+  margin: 0 0 18px;
+}
 
-.release-desc { margin: 0 0 24px; max-width: 420px; }
+.release-desc {
+  margin: 0 0 24px;
+  max-width: 420px;
+}
 
-.release-links { display: flex; gap: 12px; flex-wrap: wrap; }
+.release-links {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
 
 /* ===========================
    Cover Flip Effect
 =========================== */
-.release-cover.flip { perspective: 1200px; }
+.release-cover.flip {
+  perspective: 1200px;
+}
 
 .release-cover.flip .flip-inner {
   position: relative;
@@ -362,46 +422,59 @@ a:hover { text-decoration: underline; text-underline-offset: 4px; }
   box-shadow: 0 20px 50px rgba(0, 0, 0, .45);
 }
 
-.release-cover.flip .flip-back { transform: rotateY(180deg); }
+.release-cover.flip .flip-back {
+  transform: rotateY(180deg);
+}
 
-.release-cover.flip.is-flipped .flip-inner { transform: rotateY(180deg); }
+.release-cover.flip.is-flipped .flip-inner {
+  transform: rotateY(180deg);
+}
 
 @media (hover: none) {
-  .release-cover.flip .flip-inner { transition: none; }
+  .release-cover.flip .flip-inner {
+    transition: none;
+  }
 }
 
 /* ===========================
    Videos separated section (full-bleed)
 =========================== */
-.videos-section{
+.videos-section {
   position: relative;
   padding: 70px 0 60px;
-  margin-top: 10px;        /* jemná mezera od posledního releasu */
-  isolation: isolate;      /* ✅ fix z-index “pod discography backgroundem” */
+  margin-top: 10px;
+  /* jemná mezera od posledního releasu */
+  isolation: isolate;
+  /* ✅ fix z-index “pod discography backgroundem” */
 }
 
-.videos-section::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  width:100vw;
-  left:50%;
-  transform:translateX(-50%);
+.videos-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 100vw;
+  left: 50%;
+  transform: translateX(-50%);
   background:
-    radial-gradient(1000px 600px at 80% 0%, rgba(255,255,255,.05), transparent 60%),
+    radial-gradient(1000px 600px at 80% 0%, rgba(255, 255, 255, .05), transparent 60%),
     linear-gradient(to bottom, #11111a, #0b0b0f);
   border-top: 1px solid var(--line);
-  border-bottom: 1px solid rgba(255,255,255,.06);
-  z-index:0;
-  pointer-events:none;
+  border-bottom: 1px solid rgba(255, 255, 255, .06);
+  z-index: 0;
+  pointer-events: none;
 }
 
-.videos-section > *{ position: relative; z-index: 1; }
+.videos-section>* {
+  position: relative;
+  z-index: 1;
+}
 
 /* Headline */
-.videos-head { margin: 0 0 14px; }
+.videos-head {
+  margin: 0 0 14px;
+}
 
-.videos-head h3{
+.videos-head h3 {
   margin: 0 0 6px;
   font-size: 18px;
   font-weight: 800;
@@ -499,14 +572,19 @@ a:hover { text-decoration: underline; text-underline-offset: 4px; }
   pointer-events: none;
 }
 
-.video-card:hover { text-decoration: none; }
+.video-card:hover {
+  text-decoration: none;
+}
 
 .video-card:hover img {
   transform: scale(1.04);
   filter: brightness(0.70) grayscale(0.35);
 }
 
-.video-card:hover .video-title { opacity: 1; transform: translateY(0); }
+.video-card:hover .video-title {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 .video-card:hover .play-badge {
   transform: scale(1.05);
@@ -538,7 +616,10 @@ a:hover { text-decoration: underline; text-underline-offset: 4px; }
   z-index: 1;
 }
 
-.merch-content { position: relative; z-index: 2; }
+.merch-content {
+  position: relative;
+  z-index: 2;
+}
 
 .thumb {
   aspect-ratio: 1 / 1;
@@ -570,9 +651,15 @@ a:hover { text-decoration: underline; text-underline-offset: 4px; }
   margin-bottom: 18px;
 }
 
-.shows-sub { margin: 0; font-size: 13px; }
+.shows-sub {
+  margin: 0;
+  font-size: 13px;
+}
 
-.shows-list { display: grid; gap: 12px; }
+.shows-list {
+  display: grid;
+  gap: 12px;
+}
 
 .show-item {
   display: grid;
@@ -609,9 +696,14 @@ a:hover { text-decoration: underline; text-underline-offset: 4px; }
   letter-spacing: .08em;
 }
 
-.show-city { font-weight: 800; letter-spacing: .02em; }
+.show-city {
+  font-weight: 800;
+  letter-spacing: .02em;
+}
 
-.show-venue { font-size: 14px; }
+.show-venue {
+  font-size: 14px;
+}
 
 .show-actions {
   display: flex;
@@ -620,7 +712,9 @@ a:hover { text-decoration: underline; text-underline-offset: 4px; }
   justify-content: flex-end;
 }
 
-.shows-empty.card { margin-top: 12px; }
+.shows-empty.card {
+  margin-top: 12px;
+}
 
 .product-meta {
   display: flex;
@@ -645,7 +739,10 @@ a:hover { text-decoration: underline; text-underline-offset: 4px; }
 
 /* Shows responsive */
 @media (max-width: 700px) {
-  .shows-head { flex-direction: column; align-items: flex-start; }
+  .shows-head {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
   .show-item {
     grid-template-columns: auto 1fr;
@@ -654,9 +751,18 @@ a:hover { text-decoration: underline; text-underline-offset: 4px; }
       "actions actions";
   }
 
-  .show-date { grid-area: date; }
-  .show-main { grid-area: main; }
-  .show-actions { grid-area: actions; justify-content: flex-start; }
+  .show-date {
+    grid-area: date;
+  }
+
+  .show-main {
+    grid-area: main;
+  }
+
+  .show-actions {
+    grid-area: actions;
+    justify-content: flex-start;
+  }
 }
 
 /* ===========================
@@ -685,13 +791,24 @@ a:hover { text-decoration: underline; text-underline-offset: 4px; }
   text-transform: uppercase;
 }
 
-.media-lead { margin: 0; max-width: 62ch; }
+.media-lead {
+  margin: 0;
+  max-width: 62ch;
+}
 
-.media-hero-ctas { display: flex; gap: 10px; flex-wrap: wrap; }
+.media-hero-ctas {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
 
-.media-section { padding: 60px 0; }
+.media-section {
+  padding: 60px 0;
+}
 
-.media-card p { margin-top: 0; }
+.media-card p {
+  margin-top: 0;
+}
 
 .media-actions {
   margin-top: 14px;
@@ -700,7 +817,9 @@ a:hover { text-decoration: underline; text-underline-offset: 4px; }
   gap: 10px;
 }
 
-.media-meta { font-size: 13px; }
+.media-meta {
+  font-size: 13px;
+}
 
 .media-photos .media-photo {
   display: block;
@@ -724,23 +843,35 @@ a:hover { text-decoration: underline; text-underline-offset: 4px; }
   filter: brightness(0.85) grayscale(0.25);
 }
 
-.media-downloads { align-items: stretch; }
-
-.media-downloads .media-card { display: flex; flex-direction: column; }
-
-.media-downloads .media-card p { margin-bottom: 16px; }
-
-.media-actions { margin-top: auto; display: flex; align-items: center; gap: 12px; }
-
-.lang-switch{
-  display: inline-flex;
-  border: 1px solid rgba(255,255,255,.18);
-  border-radius: 999px;
-  overflow: hidden;
-  background: rgba(255,255,255,.04);
+.media-downloads {
+  align-items: stretch;
 }
 
-.lang-switch .lang{
+.media-downloads .media-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.media-downloads .media-card p {
+  margin-bottom: 16px;
+}
+
+.media-actions {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.lang-switch {
+  display: inline-flex;
+  border: 1px solid rgba(255, 255, 255, .18);
+  border-radius: 999px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, .04);
+}
+
+.lang-switch .lang {
   padding: 6px 9px;
   font-size: 11px;
   letter-spacing: .08em;
@@ -751,31 +882,43 @@ a:hover { text-decoration: underline; text-underline-offset: 4px; }
   border: 0;
 }
 
-.lang-switch .lang:hover{
-  background: rgba(255,255,255,.10);
+.lang-switch .lang:hover {
+  background: rgba(255, 255, 255, .10);
   opacity: 1;
   text-decoration: none;
 }
 
 .lang-switch .lang.is-active,
-.lang-switch .lang[aria-current="page"]{
-  background: rgba(255,255,255,.16);
+.lang-switch .lang[aria-current="page"] {
+  background: rgba(255, 255, 255, .16);
   opacity: 1;
 }
 
-.lang-switch .lang { transition: background .25s ease, opacity .25s ease; }
+.lang-switch .lang {
+  transition: background .25s ease, opacity .25s ease;
+}
 
 /* ===========================
    Responsive
 =========================== */
 @media (max-width: 900px) {
-  .grid.two, .grid.three { grid-template-columns: 1fr; }
 
-  .hero { min-height: 72vh; }
+  .grid.two,
+  .grid.three {
+    grid-template-columns: 1fr;
+  }
 
-  .discography { padding: 90px 0 0; }
+  .hero {
+    min-height: 72vh;
+  }
 
-  .section-title.light { margin-bottom: 40px; }
+  .discography {
+    padding: 90px 0 0;
+  }
+
+  .section-title.light {
+    margin-bottom: 40px;
+  }
 
   .release {
     grid-template-columns: 1fr;
@@ -792,9 +935,13 @@ a:hover { text-decoration: underline; text-underline-offset: 4px; }
     max-width: 100%;
   }
 
-  .release-desc { max-width: 100%; }
+  .release-desc {
+    max-width: 100%;
+  }
 
-  .video-grid { grid-template-columns: 1fr; }
+  .video-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* ===========================
@@ -888,10 +1035,12 @@ a:hover { text-decoration: underline; text-underline-offset: 4px; }
    Mobile header / nav fix
 =========================== */
 @media (max-width: 900px) {
+
   /* ať sticky sedí i na iPhonech se "safe area" */
   .site-header {
     top: env(safe-area-inset-top);
-    background: rgba(11, 11, 15, 0.92); /* víc opaque = méně “jank” při scrollu */
+    background: rgba(11, 11, 15, 0.92);
+    /* víc opaque = méně “jank” při scrollu */
     backdrop-filter: blur(10px);
   }
 
@@ -906,12 +1055,17 @@ a:hover { text-decoration: underline; text-underline-offset: 4px; }
     overflow-x: auto;
     overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
-    scrollbar-width: none; /* Firefox */
+    scrollbar-width: none;
+    /* Firefox */
     gap: 8px;
     max-width: 100%;
   }
 
-  .nav::-webkit-scrollbar { display: none; } /* Chrome/Safari */
+  .nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Chrome/Safari */
 
   .nav a {
     white-space: nowrap;
@@ -928,5 +1082,94 @@ a:hover { text-decoration: underline; text-underline-offset: 4px; }
   .lang-switch .lang {
     padding: 6px 8px;
     font-size: 10px;
+  }
+}
+
+/* ===========================
+   Mobile polish fixes
+   - brand "JANET A" stays on one line
+   - LIVE cards layout cleaner
+   - releases stack (text under cover), no overlap
+=========================== */
+@media (max-width: 900px) {
+
+  /* --- HEADER / BRAND --- */
+  .brand,
+  .brand-mark {
+    white-space: nowrap;
+    /* ✅ nedovol "JANET / A" */
+  }
+
+  .brand {
+    flex-shrink: 0;
+  }
+
+  .brand-mark {
+    padding: 6px 10px;
+    /* trochu menší na mobilu */
+  }
+
+  /* --- RELEASES: STACK to prevent overlap --- */
+  .release {
+    display: flex;
+    /* ✅ přepnout z gridu na flex stack */
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 90px;
+  }
+
+  .release.reverse {
+    /* reverse na mobilu nedává smysl */
+    flex-direction: column;
+  }
+
+  .release-cover {
+    width: min(86vw, 420px);
+  }
+
+  .release-cover.flip .flip-inner {
+    width: 100%;
+    /* ✅ cover se přizpůsobí šířce release-cover */
+  }
+
+  .release-content {
+    max-width: 92vw;
+    text-align: center;
+    /* na mobilu čitelnější */
+  }
+
+  .release-links {
+    justify-content: center;
+  }
+
+  /* --- LIVE: date + info + button čitelněji --- */
+  .show-item {
+    grid-template-columns: 86px 1fr;
+    /* date + text */
+    grid-template-areas:
+      "date main"
+      "actions actions";
+    gap: 12px 14px;
+    text-align: left;
+  }
+
+  .show-date {
+    grid-area: date;
+  }
+
+  .show-main {
+    grid-area: main;
+  }
+
+  .show-actions {
+    grid-area: actions;
+    justify-content: stretch;
+  }
+
+  .show-actions .btn {
+    width: 100%;
+    /* ✅ Tickets přes celou šířku */
+    justify-content: center;
   }
 }
