@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="cs">
+<html lang="en">
 
 <head>
   <meta charset="utf-8" />
@@ -11,19 +11,19 @@
 </head>
 
 <body>
-  <a class="skip-link" href="#music">Přeskočit na obsah</a>
+  <a class="skip-link" href="#music">Skip to content</a>
   <div id="top" aria-hidden="true"></div>
+
   <header class="site-header">
     <div class="wrap header-inner">
-      <a class="brand" href="#top" aria-label="JANET A domů">
+      <a class="brand" href="#top" aria-label="JANET A home">
         <span class="brand-mark">JANET A</span>
       </a>
 
-      <nav class="nav" aria-label="Hlavní navigace">
-        <a href="index-en.html#shows">LIVE</a>
-        <a href="index-en.html#music">MUSIC</a>
-        <a href="index-en.html#merch">MERCH</a>
-        <a href="index-en.html#contact">CONTACT</a>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="#shows">LIVE</a>
+        <a href="#music">MUSIC</a>
+        <a href="#merch">MERCH</a>
         <span class="nav-sep" aria-hidden="true"></span>
         <a href="media-en.html">PRESS & BOOKING</a>
 
@@ -39,7 +39,7 @@
 
   <main>
     <!-- HERO -->
-    <section class="hero" aria-label="Úvod">
+    <section class="hero" aria-label="Intro">
       <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="assets/hero-poster.jpg">
         <source src="assets/hero-video.mp4" type="video/mp4" />
         <source src="assets/hero-video.webm" type="video/webm" />
@@ -53,8 +53,8 @@
 
           <div class="hero-ctas">
             <a class="btn" href="#shows">Live</a>
-            <a class="btn" href="#music">Listen</a>
-            <a class="btn" href="#clips">Watch</a>
+            <a class="btn" href="#music">Music</a>
+            <a class="btn" href="#clips">Video</a>
             <a class="btn" href="#merch">Merch</a>
           </div>
 
@@ -68,15 +68,13 @@
     </section>
 
     <!-- LIVE / SHOWS -->
-    <section id="shows" class="section shows" aria-label="Koncerty">
+    <section id="shows" class="section shows" aria-label="Shows">
       <div class="wrap">
         <div class="shows-head">
           <h2 class="section-title">LIVE</h2>
         </div>
 
-        <!-- Když máte koncerty, nech tady položky .show-item -->
         <div class="shows-list" data-shows>
-
           <article class="show-item">
             <div class="show-date">
               <div class="show-day">12/05</div>
@@ -86,10 +84,12 @@
             <div class="show-main">
               <div class="show-city">Brno, CZ</div>
               <div class="show-venue muted">Kabinet Múz</div>
+              <div class="show-with">+ The Agony, Crooked Nees</div>
             </div>
 
             <div class="show-actions">
-              <a class="btn small" href="https://tickets.example.com" target="_blank" rel="noopener">Tickets</a>
+              <a class="btn small" href="https://www.facebook.com/events/1900424517529447/" target="_blank"
+                rel="noopener">Event</a>
             </div>
           </article>
 
@@ -100,32 +100,82 @@
             </div>
 
             <div class="show-main">
-              <div class="show-city">Praha, CZ</div>
+              <div class="show-city">Prague, CZ</div>
               <div class="show-venue muted">Rock Café</div>
+              <div class="show-with">+ The Agony</div>
             </div>
 
             <div class="show-actions">
-              <a class="btn small" href="https://tickets.example.com" target="_blank" rel="noopener">Tickets</a>
+              <a class="btn small" href="https://www.facebook.com/events/1578025430092397/" target="_blank"
+                rel="noopener">Event</a>
             </div>
           </article>
-
         </div>
 
-        <!-- Fallback, když nic není -->
         <div class="shows-empty card" data-shows-empty hidden>
-          <h3 class="card-title">No upcoming shows right now.</h3>
+          <h3 class="card-title">There are currently no upcoming shows announced.</h3>
           <p class="muted" style="margin:0 0 12px;">
             Want us in your city?
           </p>
-          <a class="btn" href="mailto:janetas.music@gmail.com">Book us</a>
+          <a class="btn" href="mailto:janetas.music@gmail.com">Write to us</a>
+        </div>
+
+        <div class="live-feature" data-live-feature aria-label="Live gallery">
+          <div class="live-feature-media">
+            <img class="live-feature-image" src="img/live-about/1.jpg" alt="JANET A live photo 1" data-live-main />
+
+            <div class="live-feature-overlay" aria-hidden="true"></div>
+
+            <div class="live-feature-copy">
+              <p class="live-feature-kicker">BIO</p>
+              <p class="live-feature-caption">
+                A powerful female vocal that California’s Rawckus Magazine compared to a mix of icons such as Avril
+                Lavigne, Alanis Morissette and Lady Gaga. The Janet A project was born during the Covid era, when
+                singer Janet’s original songs caught the attention of several music outlets and gradually evolved into
+                a four-piece band. The group is built on the contrast between melody and guitar pressure, with a strong
+                focus on atmosphere and a preference for its own mood and expression over clear genre labels. The band
+                has released two EPs (2019 Janet A, 2021 Freak) and the recently released album From The Left To The
+                Right End. Their journey has also included a performance at the Rock for People festival and work in
+                Berlin’s Riverside Studios after winning a European competition hosted by Musichub.
+              </p>
+            </div>
+
+            <button class="live-feature-nav live-feature-prev" type="button" aria-label="Previous photo"
+              data-live-prev>
+              ‹
+            </button>
+
+            <button class="live-feature-nav live-feature-next" type="button" aria-label="Next photo" data-live-next>
+              ›
+            </button>
+          </div>
+
+          <div class="live-feature-data" hidden>
+            <button type="button" data-live-item data-src="img/live-about/1.jpg"
+              data-alt="JANET A live photo 1"></button>
+            <button type="button" data-live-item data-src="img/live-about/2.jpg"
+              data-alt="JANET A live photo 2"></button>
+            <button type="button" data-live-item data-src="img/live-about/3.jpg"
+              data-alt="JANET A live photo 3"></button>
+            <button type="button" data-live-item data-src="img/live-about/4.jpg"
+              data-alt="JANET A live photo 4"></button>
+            <button type="button" data-live-item data-src="img/live-about/5.jpg"
+              data-alt="JANET A live photo 5"></button>
+            <button type="button" data-live-item data-src="img/live-about/6.jpg"
+              data-alt="JANET A live photo 6"></button>
+            <button type="button" data-live-item data-src="img/live-about/7.jpg"
+              data-alt="JANET A live photo 7"></button>
+            <button type="button" data-live-item data-src="img/live-about/8.jpg"
+              data-alt="JANET A live photo 8"></button>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- MUSIC / DISCOGRAPHY -->
-    <section id="music" class="discography" aria-label="Diskografie">
+    <section id="music" class="discography" aria-label="Discography">
       <div class="wrap">
-        <h2 class="section-title light">Music</h2>
+        <h2 class="section-title light">MUSIC</h2>
 
         <div class="release">
           <div class="release-cover flip" data-flip="hover">
@@ -138,13 +188,12 @@
           </div>
 
           <div class="release-content">
-            <p class="release-type">Debut Album</p>
+            <p class="release-type">Debut album</p>
             <h3>From The Left To The Right End</h3>
-            <p class="release-desc">
-              <span>Closer to what we always heard in our heads.</span>
-              <span>A clearer path and more intention.</span>
-              <span>Still having fun with it.</span>
-            </p>
+
+            <p class="release-meta">2025 · A Vocal Studio Brno, Faust Studios Prague, Riverside Studios Berlin · Mix &
+              Master by Tomas Suchanek</p>
+
             <div class="release-links">
               <a class="btn" href="https://www.youtube.com/playlist?list=OLAK5uy_knahHqnbqrD3aIA6ERLIHzUqiLFm7N8g4"
                 target="_blank" rel="noopener">YouTube</a>
@@ -167,11 +216,10 @@
           <div class="release-content">
             <p class="release-type">EP</p>
             <h3>Freak</h3>
-            <p class="release-desc">
-              <span>The first release written as a full band.</span>
-              <span>Guitars step forward.</span>
-              <span>The sound starts to take shape.</span>
-            </p>
+
+            <p class="release-meta">2021 · A Vocal Studio Brno, De Nihilo Studio Brno · Mix by Tomas Suchanek · Master
+              by Amak Golden</p>
+
             <div class="release-links">
               <a class="btn" href="https://www.youtube.com/playlist?list=OLAK5uy_nMsI7tkesC85cliYjmbCuS9SC2xtWjMcc"
                 target="_blank" rel="noopener">YouTube</a>
@@ -194,11 +242,11 @@
           <div class="release-content">
             <p class="release-type">EP</p>
             <h3>Janet A</h3>
-            <p class="release-desc">
-              <span>Written by Janet at home.</span>
-              <span>Recorded in a rehearsal room and at a cabin.</span>
-              <span>No plan. Just songs.</span>
-            </p>
+
+            <p class="release-meta">2019 · De Nihilo Studio Brno, Our Brno Apartment, Lavičné cottage · Mix & Master by
+              Tomas Suchanek &
+              friends</p>
+
             <div class="release-links">
               <a class="btn"
                 href="https://www.youtube.com/watch?v=fKmSihNrGZk&list=OLAK5uy_mN9hm_2FPLdXp_HwhUMwpxF2SR4xbGBOk"
@@ -211,40 +259,47 @@
           </div>
         </div>
 
-        <!-- FEATURED VIDEOS (pod releasy) -->
-        <div id="clips" class="videos-section">
-          <div class="wrap">
-            <div class="videos-head">
-              <h2 class="section-title light">MUSIC VIDEOS</h2>
-            </div>
+      </div>
 
-            <div class="video-grid">
-              <!-- Uprav si odkazy + thumb obrázky podle sebe -->
-              <a class="video-card" href="https://www.youtube.com/watch?v=L5fxDbUje5Q" target="_blank" rel="noopener">
-                <img src="img/thumbs/imalive.png" alt="JANET A — I'm Alive">
-                <div class="video-title">I'M ALIVE</div>
-                <div class="play-badge" aria-hidden="true">▶</div>
-              </a>
-
-              <a class="video-card" href="https://www.youtube.com/watch?v=X1sj0au_LIU" target="_blank" rel="noopener">
-                <img src="img/thumbs/comealong.png" alt="JANET A — Come Along">
-                <div class="video-title">COME ALONG</div>
-                <div class="play-badge" aria-hidden="true">▶</div>
-              </a>
-
-              <a class="video-card" href="https://www.youtube.com/watch?v=y8xTtmXeoC4" target="_blank" rel="noopener">
-                <img src="img/thumbs/fromtheleft.png" alt="JANET A — From The Left To The Right End">
-                <div class="video-title">FROM THE LEFT TO THE RIGHT END</div>
-                <div class="play-badge" aria-hidden="true">▶</div>
-              </a>
-
-              <a class="video-card" href="https://www.youtube.com/watch?v=3bPpeXwb1dY" target="_blank" rel="noopener">
-                <img src="img/thumbs/lighter.png" alt="JANET A — Lighter">
-                <div class="video-title">LIGHTER</div>
-                <div class="play-badge" aria-hidden="true">▶</div>
-              </a>
-            </div>
+      <!-- VIDEOS (full-bleed background, content still in wrap) -->
+      <div id="clips" class="videos-section">
+        <div class="wrap">
+          <div class="videos-head">
+            <h2 class="section-title light">MUSIC VIDEOS</h2>
           </div>
+
+          <div class="video-grid">
+            <a class="video-card" href="https://www.youtube.com/watch?v=L5fxDbUje5Q" target="_blank" rel="noopener">
+              <img src="img/thumbs/imalive.png" alt="JANET A — I'm Alive">
+              <div class="video-title">I'M ALIVE</div>
+              <div class="video-quote">Give me something you'll never give me again</div>
+              <div class="play-badge" aria-hidden="true">▶</div>
+            </a>
+
+            <a class="video-card" href="https://www.youtube.com/watch?v=X1sj0au_LIU" target="_blank" rel="noopener">
+              <img src="img/thumbs/comealong.png" alt="JANET A — Come Along">
+              <div class="video-title">COME ALONG</div>
+              <div class="video-quote">We're curious whose turn's to hit the floor</div>
+              <div class="play-badge" aria-hidden="true">▶</div>
+            </a>
+
+            <a class="video-card" href="https://www.youtube.com/watch?v=y8xTtmXeoC4" target="_blank" rel="noopener">
+              <img src="img/thumbs/fromtheleft.png" alt="JANET A — From The Left To The Right End">
+              <div class="video-title">FROM THE LEFT TO THE RIGHT END</div>
+              <div class="video-quote">What the hell were you thinking</div>
+              <div class="play-badge" aria-hidden="true">▶</div>
+            </a>
+
+            <a class="video-card" href="https://www.youtube.com/watch?v=3bPpeXwb1dY" target="_blank" rel="noopener">
+              <img src="img/thumbs/lighter.png" alt="JANET A — Lighter">
+              <div class="video-title">LIGHTER</div>
+              <div class="video-quote">Just come and see</div>
+              <div class="play-badge" aria-hidden="true">▶</div>
+            </a>
+          </div>
+        </div>
+      </div>
+
     </section>
 
     <!-- MERCH -->
@@ -265,7 +320,7 @@
             </div>
 
             <div class="product-meta">
-              <h3 class="card-title">T-Shirt White / Black</h3>
+              <h3 class="card-title">T-shirt white / black</h3>
               <span class="price">400 CZK</span>
             </div>
 
@@ -301,7 +356,7 @@
     </section>
 
     <!-- CONTACT -->
-    <section id="contact" class="section alt" aria-label="Kontakt">
+    <section id="contact" class="section alt" aria-label="Contact">
       <div class="wrap">
         <h2 class="section-title">CONTACT</h2>
 
@@ -332,11 +387,9 @@
   </main>
 
   <script>
-    // rok do patičky
     document.getElementById("year").textContent = new Date().getFullYear();
 
-    // smooth scroll s ohledem na sticky header
-    document.querySelectorAll('a[href^="#"]').forEach(a => {
+    document.querySelectorAll('a[href^="#"]').forEach((a) => {
       a.addEventListener("click", (e) => {
         const id = a.getAttribute("href");
         if (!id || id === "#") return;
@@ -344,7 +397,6 @@
         const el = document.querySelector(id);
         if (!el) return;
 
-        // když je cílem sekce, scrolluj na její nadpis (když existuje)
         const target = el.matches("section")
           ? (el.querySelector(".section-title") || el)
           : el;
@@ -353,15 +405,13 @@
 
         const header = document.querySelector(".site-header");
         const offset = header ? header.offsetHeight + 12 : 0;
-
-        const EXTRA = 12; // doladíš
+        const EXTRA = 12;
         const top = target.getBoundingClientRect().top + window.scrollY - offset + EXTRA;
 
         window.scrollTo({ top, behavior: "smooth" });
       });
     });
 
-    // flip on hover + auto flip-back after 3s
     document.querySelectorAll('.release-cover.flip[data-flip="hover"]').forEach((card) => {
       let t = null;
       let hovering = false;
@@ -383,9 +433,6 @@
       });
     });
 
-    // ...tvůj stávající JS
-
-    // Shows fallback: když nejsou žádné .show-item, zobraz card s bookingem
     (() => {
       const list = document.querySelector("[data-shows]");
       const empty = document.querySelector("[data-shows-empty]");
@@ -395,9 +442,7 @@
       empty.hidden = !!hasItems;
     })();
 
-
     document.querySelectorAll(".shirt-toggle").forEach((el) => {
-
       const white = el.dataset.white;
       const black = el.dataset.black;
 
@@ -431,9 +476,40 @@
         setWhite();
       });
     });
+
+    (() => {
+      const root = document.querySelector("[data-live-feature]");
+      if (!root) return;
+
+      const main = root.querySelector("[data-live-main]");
+      const prev = root.querySelector("[data-live-prev]");
+      const next = root.querySelector("[data-live-next]");
+      const items = Array.from(root.querySelectorAll("[data-live-item]"));
+
+      if (!main || !prev || !next || !items.length) return;
+
+      let index = 0;
+
+      function render(i) {
+        const item = items[i];
+        if (!item) return;
+        main.src = item.dataset.src || "";
+        main.alt = item.dataset.alt || "JANET A live photo";
+      }
+
+      prev.addEventListener("click", () => {
+        index = (index - 1 + items.length) % items.length;
+        render(index);
+      });
+
+      next.addEventListener("click", () => {
+        index = (index + 1) % items.length;
+        render(index);
+      });
+
+      render(index);
+    })();
   </script>
-
-
 </body>
 
 </html>
