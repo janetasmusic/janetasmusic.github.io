@@ -4,7 +4,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="Janet A is a grunge-pop / alt rock band from Brno. Listen to our debut album, explore merch and check upcoming shows." />
+  <meta name="description"
+    content="Janet A is a grunge-pop / alt rock band from Brno. Listen to our debut album, explore merch and check upcoming shows." />
   <title>JANET A | GRUNGE POP</title>
 
   <meta property="og:title" content="Janet A | Grunge Pop">
@@ -81,19 +82,12 @@
 
       <div class="wrap hero-inner">
         <div class="hero-card">
-          <p class="hero-subtitle">Grunge-pop / alt rock</p>
-
-          <div class="hero-ctas">
-            <a class="btn" href="#shows">Live</a>
-            <a class="btn" href="#music">Music</a>
-            <a class="btn" href="#clips">Video</a>
-            <a class="btn" href="#merch">Merch</a>
-          </div>
+          <p class="hero-subtitle">GRUNGE POP / ALT ROCK</p>
 
           <div class="hero-meta">
-            <span>Brno</span>
+            <span>BRNO</span>
             <span class="dot">•</span>
-            <span>Czech Republic</span>
+            <span>CZECH REPUBLIC</span>
           </div>
         </div>
       </div>
@@ -368,7 +362,8 @@
           </article>
 
           <article class="product card">
-            <div class="thumb" role="img" aria-label="Vinyl" style="background-image: url('img/merch/vinyl.jpg');">
+            <div class="thumb vinyl-toggle" role="img" aria-label="Vinyl" data-prehover="img/merch/vinyl-prehover.jpg"
+              data-hover="img/merch/vinyl-hover.jpg" style="background-image: url('img/merch/vinyl-prehover.jpg');">
             </div>
 
             <div class="product-meta">
@@ -549,6 +544,41 @@
 
       render(index);
     })();
+  </script>
+
+  <script>
+    // merch vinyl hover
+    document.querySelectorAll(".vinyl-toggle").forEach((el) => {
+      const prehover = el.dataset.prehover;
+      const hover = el.dataset.hover;
+
+      let timeout = null;
+      let isHovering = false;
+
+      function setPrehover() {
+        el.style.backgroundImage = `url('${prehover}')`;
+      }
+
+      function setHover() {
+        el.style.backgroundImage = `url('${hover}')`;
+      }
+
+      el.addEventListener("mouseenter", () => {
+        isHovering = true;
+        setHover();
+
+        clearTimeout(timeout);
+        timeout = setTimeout(() => {
+          if (isHovering) setPrehover();
+        }, 3000);
+      });
+
+      el.addEventListener("mouseleave", () => {
+        isHovering = false;
+        clearTimeout(timeout);
+        setPrehover();
+      });
+    });
   </script>
 </body>
 
