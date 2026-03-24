@@ -94,11 +94,6 @@ a:hover {
   text-decoration: none;
 }
 
-.brand-logo {
-  display: block;
-  height: 40px;
-  width: 100px;
-}
 
 .brand-mark {
   padding: 8px 10px;
@@ -1548,4 +1543,16 @@ a:hover {
     margin-left: 8px;
   }
 
+}
+
+@media (max-width: 700px) {
+  .hero-card {
+    width: 100%;
+  }
+
+  .hero-subtitle,
+  .hero-meta {
+    text-align: center;
+    justify-content: center;
+  }
 }
