@@ -1103,6 +1103,10 @@ a:hover {
     grid-area: actions;
     justify-content: flex-start;
   }
+
+  .shows {
+    padding-top: 160px;
+  }
 }
 
 /* ===========================
@@ -1387,7 +1391,7 @@ a:hover {
 
   /* Hero adjustments */
   .hero {
-    min-height: 70vh;
+    min-height: 73vh;
   }
 
   .hero-inner {
