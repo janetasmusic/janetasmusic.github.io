@@ -1198,37 +1198,96 @@ a:hover {
 
 .lang-switch {
   display: inline-flex;
-  border: 1px solid rgba(255, 255, 255, .18);
+  align-items: center;
+  gap: 2px;
+  padding: 2px;
+  border: 1px solid rgba(255, 255, 255, .10);
   border-radius: 999px;
-  overflow: hidden;
-  background: rgba(255, 255, 255, .04);
+  background: rgba(255, 255, 255, .06);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .04);
 }
 
 .lang-switch .lang {
-  padding: 6px 9px;
-  font-size: 11px;
+  padding: 5px 8px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 400;
   letter-spacing: .08em;
   text-transform: uppercase;
   line-height: 1;
   text-decoration: none;
-  opacity: .75;
+  color: rgba(255, 255, 255, .78);
+  opacity: 1;
   border: 0;
+  transition: background .25s ease, color .25s ease, opacity .25s ease;
 }
 
 .lang-switch .lang:hover {
-  background: rgba(255, 255, 255, .10);
-  opacity: 1;
+  background: rgba(255, 255, 255, .08);
+  color: rgba(255, 255, 255, .98);
   text-decoration: none;
 }
 
 .lang-switch .lang.is-active,
 .lang-switch .lang[aria-current="page"] {
-  background: rgba(255, 255, 255, .16);
-  opacity: 1;
+  background: rgba(255, 255, 255, .14);
+  color: rgba(255, 255, 255, .98);
 }
 
-.lang-switch .lang {
-  transition: background .25s ease, opacity .25s ease;
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.nav-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 4px;
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--text);
+  cursor: pointer;
+}
+
+.nav-toggle {
+  -webkit-appearance: none;
+  appearance: none;
+  touch-action: manipulation;
+  position: relative;
+  z-index: 32;
+}
+
+.nav-toggle:hover {
+  background: rgba(255, 255, 255, .12);
+}
+
+.nav-toggle span {
+  display: block;
+  width: 18px;
+  height: 2px;
+  border-radius: 999px;
+  background: currentColor;
+  transition: transform .25s ease, opacity .25s ease;
+}
+
+.nav-toggle[aria-expanded="true"] span:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+
+.nav-toggle[aria-expanded="true"] span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-toggle[aria-expanded="true"] span:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
 }
 
 /* ===========================
@@ -1364,57 +1423,94 @@ a:hover {
 
 }
 
-/* ===========================
-   Mobile header / nav fix
-=========================== */
+
 @media (max-width: 900px) {
 
-  /* ať sticky sedí i na iPhonech se "safe area" */
   .site-header {
     top: env(safe-area-inset-top);
     background: rgba(11, 11, 15, 0.92);
-    /* víc opaque = méně “jank” při scrollu */
     backdrop-filter: blur(10px);
   }
 
   .header-inner {
-    padding: 10px 0;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto auto;
+    align-items: center;
     gap: 10px;
+    padding: 10px 0;
+    position: relative;
   }
 
-  /* nav v jednom řádku, scrollovatelný */
+  .header-actions {
+    display: contents;
+  }
+
+  .brand,
+  .brand-mark {
+    white-space: nowrap;
+  }
+
+  .brand {
+    grid-column: 1;
+    min-width: 0;
+    flex-shrink: 1;
+  }
+
+  .brand-mark {
+    padding: 6px 10px;
+  }
+
+  .lang-switch {
+    grid-column: 2;
+    justify-self: center;
+    flex-shrink: 0;
+  }
+
+  .lang-switch .lang {
+    padding: 4px 10px;
+    font-size: 12px;
+  }
+
+  .nav-toggle {
+    grid-column: 3;
+    justify-self: end;
+    display: inline-flex;
+    flex-shrink: 0;
+  }
+
   .nav {
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    overflow-y: hidden;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    /* Firefox */
-    gap: 8px;
-    max-width: 100%;
-  }
-
-  .nav::-webkit-scrollbar {
+    grid-column: 1 / -1;
     display: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 6px;
+    width: 100%;
+    margin-top: 0;
+    padding: 10px;
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    background: rgba(18, 18, 26, .96);
+    box-shadow: var(--shadow);
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    right: 0;
+    z-index: 31;
   }
 
-  /* Chrome/Safari */
+  .nav.is-open {
+    display: flex;
+  }
 
   .nav a {
     white-space: nowrap;
-    padding: 8px 10px;
+    padding: 12px 14px;
     font-size: 14px;
+    border: 1px solid transparent;
   }
 
-  /* separátory zbytečně rozbíjí řádek */
   .nav-sep {
     display: none;
-  }
-
-  /* language switch ať je kompaktní */
-  .lang-switch .lang {
-    padding: 6px 8px;
-    font-size: 10px;
   }
 }
 
@@ -1517,32 +1613,6 @@ a:hover {
     /* ✅ Tickets přes celou šířku */
     justify-content: center;
   }
-}
-
-@media (max-width: 900px) {
-
-  .header-inner {
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    align-items: center;
-  }
-
-  .brand {
-    grid-column: 1;
-  }
-
-  .nav {
-    grid-column: 2;
-    overflow-x: auto;
-    flex-wrap: nowrap;
-  }
-
-  .lang-switch {
-    grid-column: 3;
-    flex-shrink: 0;
-    margin-left: 8px;
-  }
-
 }
 
 @media (max-width: 700px) {
