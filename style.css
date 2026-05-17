@@ -1666,18 +1666,28 @@ a:hover {
 }
 
 @media (max-width: 768px) {
-  .event-sticker {
-    top: auto;
-    right: 10px;
-    bottom: 10px;
-
-    transform: rotate(-8deg);
-
-    font-size: 10px;
-    padding: 5px 8px;
+  .shows-list {
+    gap: 28px;
   }
 
   .show-item {
-    padding-bottom: 54px;
+    position: relative;
+    overflow: visible;
+    padding-bottom: 14px !important;
+  }
+
+  .show-item .event-sticker {
+    position: absolute;
+    top: auto !important;
+    left: auto !important;
+    right: 14px !important;
+    bottom: -10px !important;
+
+    transform: rotate(-6deg) !important;
+    z-index: 20;
+
+    font-size: 10px;
+    padding: 5px 10px;
+    pointer-events: none;
   }
 }
